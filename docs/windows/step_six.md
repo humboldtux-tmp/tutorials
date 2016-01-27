@@ -36,12 +36,9 @@ If you don't already have a terminal open, open one now:
 
 5. Find the `IMAGE ID` for your `docker-whale` image.
 
-	In this example, the id is `7d9495d03763`.
+	 In this example, the id is `7d9495d03763`.
 
-	You'll notice that currently, the `REPOSITORY` shows the repository but not
-	the namespace for `docker-whale`. You need to include the `namespace` for
-	Docker Hub to associate it with your account.  The `namespace` is the same as
-	your account name.
+	  Notice that the `REPOSITORY` shows the repo name (`docker-whale`), but not a namespace. For Docker Hub to associate this `docker-whale` image with your GitHub account, you need to rename it to `YOUR_GITHUB_USERNAME/docker-whale`. Your account name will indicate the `namespace` on GitHub for your image. You'll do this in the next step when you tag the image.
 
 6. Use `IMAGE ID` and the `docker tag` command to tag your `docker-whale` image.
 
