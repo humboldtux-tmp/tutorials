@@ -36,12 +36,9 @@ If you don't already have a terminal open, open one now:
 
 5. Find the `IMAGE ID` for your `docker-whale` image.
 
-	In this example, the id is `7d9495d03763`.
+	 In this example, the id is `7d9495d03763`.
 
-	You'll notice that currently, the `REPOSITORY` shows the repository but not
-	the namespace for `docker-whale`. You need to include the `namespace` for
-	Docker Hub to associate it with your account.  The `namespace` is the same as
-	your account name.
+    Notice that the `REPOSITORY` shows the repo name (`docker-whale`), but not a namespace. For Docker Hub to associate this `docker-whale` image with your GitHub account, you need to rename it to `YOUR_GITHUB_USERNAME/docker-whale`. Your account name will indicate the `namespace` on GitHub for your image. You'll do this in the next step when you tag the image.
 
 6. Use `IMAGE ID` and the `docker tag` command to tag your `docker-whale` image.
 
@@ -53,7 +50,7 @@ If you don't already have a terminal open, open one now:
     your image's ID and your account name and press RETURN.
 
 		$ docker tag 7d9495d03763 maryatdocker/docker-whale:latest
-	
+
 7. Type the `docker images` command again to see your newly tagged image.
 
         $ docker images
@@ -95,11 +92,11 @@ If you don't already have a terminal open, open one now:
 			a82efea989f9: Image successfully pushed
 			e9e06b06e14c: Image successfully pushed
 			Digest: sha256:ad89e88beb7dc73bf55d456e2c600e0a39dd6c9500d7cd8d1025626c4b985011
-			
+
 10. Return to your profile on Docker Hub to see your new image.
 
 	 {{< figure src="/tutimg/new_image.png" >}}
-	
+
 # Step 2: Pull your new image
 
 In this last section, you'll pull the image you just pushed to hub. Before you
@@ -130,7 +127,7 @@ images.
 
 		$ docker rmi -f 7d9495d03763
 		$ docker rmi -f docker-whale
-		
+
 4. Pull a new image from your repository using the `docker pull` command.
 
     The command you type should include your username from Docker Hub.
