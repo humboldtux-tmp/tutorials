@@ -19,7 +19,7 @@ Depending on your interest, the Docker documentation contains a wealth of inform
     <th class="tg-031e">Where to find it</th>
   </tr>
   <tr>
-    <td class="tg-031e">This getting started provided very basic essentials for using Docker on Windows. If you want to do more with Docker, start with the full installation and user guide for Docker Toolbox.</td>
+    <td class="tg-031e">This getting started provided very basic essentials for using Docker Engine on Windows. If you want to do more with Docker Engine, start with the full installation and user guide for Docker Toolbox.</td>
     <td class="tg-031e"><a href="https://docs.docker.com/installation/windows/">Install Docker Toolbox</a></td>
   </tr>
   <tr>
@@ -34,6 +34,6 @@ Depending on your interest, the Docker documentation contains a wealth of inform
 </table>
 
 
-	
+
 
 &nbsp;

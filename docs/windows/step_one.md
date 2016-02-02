@@ -9,15 +9,23 @@ weight = 1
 
 # Install Docker for Windows
 
-Because Docker relies on Linux-specific features, you can't run Docker natively
-in Windows. Instead, you must install the Docker Toolbox application. The
-application installs a VirtualBox Virtual Machine (VM), Docker itself, and the
-Docker Toolbox management tool. These three things allow you to run Docker on
-Windows.
+Windows users use Docker Toolbox to install Docker software. Docker Toolbox includes the following Docker tools:
+
+* Docker CLI client for running Docker Engine to create images and containers
+* Docker Machine so you can run Docker Engine commands from Windows terminals
+* Docker Compose for running the `docker-compose` command
+* Kitematic, the Docker GUI
+* the Docker QuickStart shell preconfigured for a Docker command-line environment
+* Oracle VM VirtualBox
+
+Because the Docker Engine daemon uses Linux-specific kernel features, you can't
+run Docker Engine natively in Windows. Instead, you must use the Docker Machine
+command,  `docker-machine`,  to create and attach to a small Linux VM on your
+machine. This VM hosts Docker Engine for you on your Windows system.
 
 ## Step 1: Check your version
 
-To run Docker, your machine must have a 64-bit operating system running Windows 7 or higher. Additionally, you must make sure that virtualization is enabled on your machine. 
+To run Docker, your machine must have a 64-bit operating system running Windows 7 or higher. Additionally, you must make sure that virtualization is enabled on your machine.
 To verify your machine meets these requirements, do the following:
 
 1. Right click the windows message and choose **System*.
@@ -46,8 +54,8 @@ and follow the on-screen instructions.
 
 3. Verify your Windows OS is 64-bit (x64)
 
-   How you do this verification depends on your Windows version.  For details, see the Windows 
-    article [How to determine whether a computer is running a 32-bit version or 64-bit version 
+   How you do this verification depends on your Windows version.  For details, see the Windows
+    article [How to determine whether a computer is running a 32-bit version or 64-bit version
     of the Windows operating system](https://support.microsoft.com/en-us/kb/827218).
 
 ## Step 2: Install Docker Toolbox
@@ -136,12 +144,12 @@ In this step, you start Docker Toolbox and run a simple Docker command.
         This message shows that your installation appears to be working correctly.
 
         To generate this message, Docker took the following steps:
-         1. The Docker client contacted the Docker daemon.
-         2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+         1. The Docker Engine CLI client contacted the Docker Engine daemon.
+         2. The Docker Engine daemon pulled the "hello-world" image from the Docker Hub.
             (Assuming it was not already locally available.)
-         3. The Docker daemon created a new container from that image which runs the
+         3. The Docker Engine daemon created a new container from that image which runs the
             executable that produces the output you are currently reading.
-         4. The Docker daemon streamed that output to the Docker client, which sent it
+         4. The Docker Engine daemon streamed that output to the Docker Engine CLI client, which sent it
             to your terminal.
 
         To try something more ambitious, you can run an Ubuntu container with:
@@ -153,9 +161,9 @@ In this step, you start Docker Toolbox and run a simple Docker command.
 
 ## Where to go next
 
-At this point, you have successfully installed Docker. Leave the Docker Toolbox
-window open. Go to the next page to [read a very short introduction to Docker
-images and containers](step_two.md).
+At this point, you have successfully installed the Docker software. Leave the
+Docker Quickstart Terminal window open. Now, go to the next page to [read a very
+short introduction Docker images and containers](step_two.md).
 
 
 &nbsp;
