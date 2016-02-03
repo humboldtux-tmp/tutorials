@@ -253,7 +253,7 @@ In the lab we will use **node-1** to push and pull from our DTR instance which i
 		docker stop/waiting
 		docker start/running, process 26208
 
-Your Docker client on **node-1** is now configured to trust your DTR instance. 		
+Your Docker Engine CLI client on **node-1** is now configured to trust your DTR instance. 		
 
 ### Pushing and pulling images
 

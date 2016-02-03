@@ -133,7 +133,7 @@ The following procedure will configure the Consul key-value store on `node-0`. T
         CONTAINER ID        IMAGE               COMMAND                  CREATED             STATUS              PORTS                                                                            NAMES
         3092b9afa96c        progrium/consul     "/bin/start -server -"   35 seconds ago      Up 34 seconds       53/tcp, 53/udp, 8300-8302/tcp, 8301-8302/udp, 8400/tcp, 0.0.0.0:8500->8500/tcp   consul
 
-Follow the procedure below on `node-1`, `node-2`,and `node-3` to configure the Docker daemon to listen on TCP port `2375` and to use the Consul key-value store created in the previous steps.
+Follow the procedure below on `node-1`, `node-2`,and `node-3` to configure the Docker Engine daemon to listen on TCP port `2375` and to use the Consul key-value store created in the previous steps.
 
 1. Add the following options to the `DOCKER_OPTS` line in the `/etc/default/docker` file.
 
@@ -193,7 +193,7 @@ The following procedure will walk you through building a Swarm cluster.
 
 4. Confirm that the two nodes are part of the Swarm cluster:
 
-	The following command uses the `-H` flag to tell the Docker client to talk to the Swarm manager.
+	The following command uses the `-H` flag to tell the Docker Engine CLI client to talk to the Swarm manager.
 
 		node-0:$ docker -H tcp://0.0.0.0:3375 info
 		Containers: 0
@@ -235,7 +235,7 @@ The following procedure will walk you through building a Swarm cluster.
 		 Built:
 		 OS/Arch:      linux/amd64
 
-6. One `node-0` point all Docker client commands at the Swarm manager instead of the local engine daemon. To do so, you need to set `DOCKER_HOST` to point at the Swarm Master's IP and TCP port. Remember that the Swarm Master is just a container running and listening on port 3375.
+6. One `node-0` point all Docker Engine CLI client commands at the Swarm manager instead of the local engine daemon. To do so, you need to set `DOCKER_HOST` to point at the Swarm Master's IP and TCP port. Remember that the Swarm Master is just a container running and listening on port 3375.
 
     Remember to replace <node-0-privateIP> with the private IP address of your node-0 AWS instance
 

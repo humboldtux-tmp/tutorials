@@ -11,7 +11,7 @@ weight = 5
 
 You've built something really cool, you should share it. In this next section,
 you'll do just that. You'll need a Docker Hub account. Then, you'll push your
-image up to it so other people with Docker can run it.
+image up to it so other people with Docker Engine can run it.
 
 
 ## Step 1: Sign up for an account

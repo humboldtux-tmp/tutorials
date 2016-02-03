@@ -134,7 +134,7 @@ If you don't already have the Docker Quickstart Terminal open, open one now:
 On this page, you learned to search for images on Docker Hub. You used your
 command line to run an image. Think about it, effectively you ran a piece of
 Linux software on your Mac computer.  You learned that running an image copies
-it on your computer.  Now, you are ready to create your own image with Docker.
+it on your computer.  Now, you are ready to create your own Docker image.
 Go on to the next part [to build your own image](step_four.md).
 
 

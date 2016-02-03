@@ -7,25 +7,26 @@ identifier = "mac_install"
 weight = 1
 +++
 
-# Install Docker Mac OS X
+# Install Docker Toolbox on Mac OS X
 
-You install Docker using Docker Toolbox. Docker Toolbox includes the following Docker tools:
+Mac OS X users use Docker Toolbox to install Docker software. Docker Toolbox includes the following Docker tools:
 
-* Docker Machine for running the `docker-machine` binary
-* Docker Engine for running the `docker` binary
-* Docker Compose for running the `docker-compose` binary
+* Docker CLI client for running Docker Engine to create images and containers
+* Docker Machine so you can run Docker Engine commands from Mac OS X terminals
+* Docker Compose for running the `docker-compose` command
 * Kitematic, the Docker GUI
-* a shell preconfigured for a Docker command-line environment
+* the Docker QuickStart shell preconfigured for a Docker command-line environment
 * Oracle VM VirtualBox
 
-Because the Docker daemon uses Linux-specific kernel features, you can't run
-Docker natively in OS X. Instead, you must use `docker-machine` to create and
-attach to a Docker VM on your machine. This VM hosts Docker for you on your Mac.
+Because the Docker Engine daemon uses Linux-specific kernel features, you can't
+run Docker Engine natively in OS X. Instead, you must use the Docker Machine
+command,  `docker-machine`,  to create and attach to a small Linux VM on your
+machine. This VM hosts Docker Engine for you on your Mac.
 
 ## Step 1: Check your version
 
-Your Mac must be running OS X 10.8 "Mountain Lion" or newer to run Docker.
-To find out what version of the OS you have:
+Your Mac must be running OS X 10.8 "Mountain Lion" or newer to run Docker
+software. To find out what version of the OS you have:
 
 1. Choose **About this Mac** from the Apple menu.
 
@@ -88,7 +89,7 @@ and choosing "Open" from the pop-up menu.
 
 To run a Docker container, you:
 
-* create a new (or start an existing) Docker virtual machine
+* create a new (or start an existing) Docker Engine host running
 * switch your environment to your new VM
 * use the `docker` client to create, load, and manage containers
 
@@ -159,11 +160,11 @@ Virtual Box VM, it maintains its configuration between uses.
         This message shows that your installation appears to be working correctly.
 
         To generate this message, Docker took the following steps:
-        1. The Docker client contacted the Docker daemon.
-        2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
-        3. The Docker daemon created a new container from that image which runs the
+        1. The Docker Engine CLI client contacted the Docker Engine daemon.
+        2. The Docker Engine daemon pulled the "hello-world" image from the Docker Hub.
+        3. The Docker Engine daemon created a new container from that image which runs the
            executable that produces the output you are currently reading.
-        4. The Docker daemon streamed that output to the Docker client, which sent it
+        4. The Docker Engine daemon streamed that output to the Docker Engine CLI client, which sent it
            to your terminal.
 
         To try something more ambitious, you can run an Ubuntu container with:
@@ -178,9 +179,9 @@ Virtual Box VM, it maintains its configuration between uses.
 
 ## Where to go next
 
-At this point, you have successfully installed Docker. Leave the Docker Quickstart Terminal
-window open. Now, go to the next page to [read a very short introduction Docker
-images and containers](step_two.md).
+At this point, you have successfully installed the Docker software. Leave the
+Docker Quickstart Terminal window open. Now, go to the next page to [read a very
+short introduction Docker images and containers](step_two.md).
 
 
 &nbsp;

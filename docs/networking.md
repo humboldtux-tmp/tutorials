@@ -94,7 +94,7 @@ The diagram below shows **node-0** configured as the key-value store.
 
 ## Task 2: Configure the Engine to use key-value store
 
-On `node-1`, `node-2`,and `node-3`, reconfigure the Docker daemon to listen on TCP port `2375` and to use the Consul key-value store created in Task 1.
+On `node-1`, `node-2`,and `node-3`, reconfigure the Docker Engine daemon to listen on TCP port `2375` and to use the Consul key-value store created in Task 1.
 
 1. SSH to `node-1`.
 
@@ -141,7 +141,7 @@ Each Docker host has these default networks, only the IDs differ.
 
 Historically, these three networks are part of Docker's implementation. When you run a container you can use the `--net` flag to specify which network you want to run the container on. These three networks are still available to you.
 
-* The `bridge` network represents the `docker0` network present in all Docker installations. Unless you specify otherwise with the `docker run --net=<NETWORK>` option, the Docker daemon connects containers to this network by default.
+* The `bridge` network represents the `docker0` network present in all Docker installations. Unless you specify otherwise with the `docker run --net=<NETWORK>` option, the Docker Engine daemon connects containers to this network by default.
 
 * The `none` network adds a container to a container-specific network stack. That container lacks a network interface.
 

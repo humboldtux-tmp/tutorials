@@ -1,19 +1,19 @@
 +++
-title = "Get Started with Docker"
-description = "Getting started with Docker"
-keywords = ["beginner, getting started, Docker"]
+title = "Get Started with Docker Engine"
+description = "Getting started with Docker Engine"
+keywords = ["beginner, getting started, Docker, Engine"]
 aliases = ["/linux/started/"]
 [menu.linux]
 identifier = "linux_getstarted"
 +++
 
-# Get Started with Docker for Linux
+# Get Started with Docker Engine for Linux
 
 #### **This is written for users of Linux distribution such as Ubuntu. If you are not using Linux, see the [Windows](../windows/index.md) or [Mac OS X](../mac/index.md) version.**
 
 This getting started is for non-technical users who are interested in learning about Docker. By following this getting started, you'll learn fundamental Docker features by performing some simple tasks. You'll learn how to:
 
-* install Docker
+* install Docker Engine
 * run a software image in a container
 * browse for an image on Docker Hub
 * create your own image and run it in a container
@@ -26,9 +26,9 @@ The getting started was user tested to reduce the chance of users having problem
 
 ### Make sure you understand...
 
-This getting started uses Docker commands with a terminal window. You don't need
-to be experienced using a command line, but you should be familiar with how to
-open one and type commands.
+This getting started uses Docker Engine CLI commands entered on the commandline of a terminal window. You
+don't need to be experienced using a command line, but you should be familiar
+with how to open one and type commands.
 
 Go to [the next page to install](step_one.md).
 

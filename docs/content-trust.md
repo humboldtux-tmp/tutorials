@@ -29,7 +29,7 @@ keywords = ["tbd"]
 Docker Content Trust allows image operations with a remote Docker registry to enforce
 client-side signing and verification of image tags. It enables
 digital signatures for data sent to, and received from, remote Docker registries.
-These signatures allow Docker client-side interfaces to verify the integrity and
+These signatures allow Docker Engine CLI client-side interfaces to verify the integrity and
 publisher of specific image tags.
 
 Image publishers can sign their images. Image consumers can ensure that the
@@ -95,7 +95,7 @@ Now that you've enabled Docker Content Trust, try to pull the image you just pus
     no trust data available
 
 
-You'll notice that the Docker client did not pull the image.  This is because the Docker client is now expecting images to be signed, but the image you tried to pull image is not signed.
+You'll notice that the Docker Engine CLI client did not pull the image.  This is because the Docker Engine CLI client is now expecting images to be signed, but the image you tried to pull image is not signed.
 
 ## Task 3: Push a signed image
 
@@ -386,7 +386,7 @@ Congrats! you have signed and pushed a new image using the Yubikey. Docker users
 
 ## Conclusion
 
-At this point you have successfully enabled Docker Content Trust on your Docker client, signed an image, and pushed the image to Docker Hub.
+At this point you have successfully enabled Docker Content Trust on your Docker Engine CLI client, signed an image, and pushed the image to Docker Hub.
 
 ### Share on Twitter!
 

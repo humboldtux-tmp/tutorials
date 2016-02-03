@@ -185,7 +185,7 @@ The following steps will build and run the app:
 
 **Docker Swarm** is native clustering for Docker. It turns a pool of Docker hosts (engines) into a single, virtual host (engine).
 
-Swarm serves the standard Docker API, meaning any tool which already communicates with the Docker daemon can use Swarm to transparently scale to multiple hosts. Some of these tools include: Dokku, Compose, Krane, Flynn, Deis, DockerUI, Shipyard, Drone, Jenkins... and, of course, the Docker client itself.
+Swarm serves the standard Docker API, meaning any tool which already communicates with the Docker Engine daemon can use Swarm to transparently scale to multiple hosts. Some of these tools include: Dokku, Compose, Krane, Flynn, Deis, DockerUI, Shipyard, Drone, Jenkins... and, of course, the Docker Engine CLI client itself.
 
 There are multiple ways to create a Swarm cluster - full details [here](https://github.com/docker/swarm/tree/master/discovery).
 
@@ -195,7 +195,7 @@ The following steps will walk you through the process of:
 
 - Configuring the Docker Engines on **node-1** and **node-2** to listen on the network
 - Add "staging" and "production" tags/labels to the cluster nodes
-- Restart the Docker daemons on **node-1** and **node-2**
+- Restart the Docker Engine daemons on **node-1** and **node-2**
 
 \
 
@@ -239,7 +239,7 @@ The following steps will walk you through the process of:
 
 6. Confirm that the two nodes are part of the Swarm cluster:
 
-	The following command uses the `-H` flag to tell the Docker client to talk to the Swarm manager.
+	The following command uses the `-H` flag to tell the Docker Engine CLI client to talk to the Swarm manager.
 
 		node-0:$ docker -H tcp://0.0.0.0:3375 info
 		Containers: 0
@@ -286,13 +286,13 @@ The following steps will walk you through the process of:
 
 Now that we have a Swarm cluster, you can re-deploy DockChat on the Swarm Cluster.
 
-**Step 1 :** The first step is to point all Docker client commands at the Swarm manager instead of a single local engine on **node-0**. To do so, you need to set `DOCKER_HOST` to point at the Swarm Master's IP and TCP port. Remember that the Swarm Master is just a container running and listening on port 3375.
+**Step 1 :** The first step is to point all Docker Engine CLI client commands at the Swarm manager instead of a single local engine on **node-0**. To do so, you need to set `DOCKER_HOST` to point at the Swarm Master's IP and TCP port. Remember that the Swarm Master is just a container running and listening on port 3375.
 
 Remember to replace <node-0-privateIP> with the private IP address of your node-0 AWS instance
 
 	node-0:$ export DOCKER_HOST=<node-0-PrivateIP>:3375
 
-**Step 2 :** Currently, **docker-compose** does not support building an image across all Swarm nodes. Therefore, you need to first build the image using the Docker client, tag it, push it to Docker Hub, and use that image in docker-compose.yml file.
+**Step 2 :** Currently, **docker-compose** does not support building an image across all Swarm nodes. Therefore, you need to first build the image using the Docker Engine CLI client, tag it, push it to Docker Hub, and use that image in docker-compose.yml file.
 
 
 	node-0:~/dockchat$ docker login

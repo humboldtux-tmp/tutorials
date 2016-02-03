@@ -13,7 +13,7 @@ keywords = ["tbd"]
 
 > **Tasks**
 - [Prerequisites](#prerequisites)
-- [Task 1: Implementing a volume via the Docker client](#task-1-implementing-a-volume-via-the-docker-client)
+- [Task 1: Implementing a volume via the Docker Engine CLI client](#task-1-implementing-a-volume-via-the-docker-client)
 - [Task 2: Understand how Docker represents volume data in the file system](#task-2-understand-how-docker-represents-volume-data-in-the-file-system)
 - [Task 3: Deleting a volume](#task-3-deleting-a-volume)
 - [Task 4: Map a host directory to a Docker volume](#task-4-map-a-host-directory-to-a-docker-volume)
@@ -34,7 +34,7 @@ Data volumes are designed to persist data, independent of the container’s life
 ## Prerequisites
 For this lab, please use `node-0` and ensure no containers are running on that node. To check for running containers use the `docker ps` command.
 
-## Task 1: Implementing a volume via the Docker client
+## Task 1: Implementing a volume via the Docker Engine CLI client
 In this task, you're going to create a new container and add a file to it.
 
 1. SSH into your `node-0` AWS instance with your supplied credentials, for example:
@@ -344,7 +344,7 @@ In this example, you'll create a new file from one container in a directory that
 
 ## Conclusion
 
-In this lab, you learned the basics of Docker volumes. You created a new Docker volume using the Docker client, and then explored the host file system to understand the relationship between the local file system and the mounted volume in the container. You then deleted the volume, and mapped a new volume to a specific directory on the host file system. Finally we looked at how you can share a volume between multiple containers.
+In this lab, you learned the basics of Docker volumes. You created a new Docker volume using the Docker Engine CLI client, and then explored the host file system to understand the relationship between the local file system and the mounted volume in the container. You then deleted the volume, and mapped a new volume to a specific directory on the host file system. Finally we looked at how you can share a volume between multiple containers.
 
 Feel free to continue exploring Docker volumes.
 
